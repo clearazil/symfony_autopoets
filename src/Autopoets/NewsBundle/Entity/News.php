@@ -53,6 +53,12 @@ class News
      */
     protected $updated_at;
 
+    /**
+     * Now we tell doctrine that before we persist or update we call the updatedTimestamps() function.
+     *
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     */
     public function updatedTimestamps()
     {
         $this->setUpdatedAt(new \DateTime(date('Y-m-d H:i:s')));
