@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+<section id="content">
+    <div class="container_12">
+        <div class="">
+		    <h1>News edit</h1>
+
+		    {{ form(edit_form) }}
+
+		    <ul class="record_actions">
+			    <li>
+			        <a href="{{ path('news') }}">
+			            Back to the list
+			        </a>
+			    </li>
+			    <li>{{ form(delete_form) }}</li>
+			</ul>
+		</div>
+	</div>
+</section>
+{% endblock %}

@@ -11,4 +11,9 @@ class DefaultController extends Controller
     {
         return $this->render('NewsBundle:Default:index.html.twig');
     }
+
+    public function createAction()
+    {
+    	return $this->render('NewsBundle:Default:create.html.twig');
+    }
 }

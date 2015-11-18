@@ -150,5 +150,47 @@ class News
     {
         return $this->message;
     }
+
+    /**
+     * Set created_at
+     *
+     * @param string $created_at
+     *
+     * @return string
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->created_at = $created_at;
+    }
+    /**
+     * Get created_at
+     *
+     * @return string
+     */
+    public function getCreatedAt()
+    {
+        return $this->created_at;
+    }
+
+    /**
+     * Set updated_at
+     *
+     * @param string $updated_at
+     *
+     * @return string
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->updated_at = $updated_at;
+    }
+    /**
+     * Get updated_at
+     *
+     * @return string
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updated_at;
+    }
 }
 
