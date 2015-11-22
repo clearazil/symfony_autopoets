@@ -10,4 +10,17 @@ namespace Autopoets\NewsBundle\Entity;
  */
 class NewsRepository extends \Doctrine\ORM\EntityRepository
 {
+	public function findAll()
+	{
+		return $this->findBy([], ['created_at' => 'DESC']);
+	}
+
+	public function findLimited($limit) 
+	{
+		return $this->createQueryBuilder('u')
+			->setMaxResults($limit)
+			->orderBy('u.created_at', 'DESC')
+			->getQuery()
+			->execute();
+	}
 }

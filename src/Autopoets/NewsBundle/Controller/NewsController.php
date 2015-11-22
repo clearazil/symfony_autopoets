@@ -23,7 +23,9 @@ class NewsController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('NewsBundle:News')->findAll();
+        $entities = $em->getRepository('NewsBundle:News')->findLimited(2);
+
+        //var_dump($entities);die;
 
         //var_dump($entities);die;
 
@@ -34,6 +36,8 @@ class NewsController extends Controller
                 $entities[$key]->image = 'images/img1.jpg';
             }
         }
+
+        //var_dump($entities);die;
 
         
 
