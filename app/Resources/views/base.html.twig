@@ -7,8 +7,11 @@
     <meta name="keywords" content="Your keywords">
     <meta name="author" content="Your name">
     {% block stylesheets %}
+         <link rel="stylesheet" href="{{asset('css/bootstrap.min.css') }}">
+         <link rel="stylesheet" href="{{asset('css/bootstrap-theme.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
         <link rel="stylesheet" href="{{ asset('css/nivo-slider.css') }}" media="screen">
+
     {% endblock %}
 </head>
 <body>
@@ -22,7 +25,7 @@
                 <div class="main">
                     <nav>
                             <ul class="menu">
-                                <li><a href="#" class="active">Home</a></li>
+                                <li><a href="{{ path('news_homepage') }}" class="active">Home</a></li>
                                 <li><a href="#">Over Mij</a></li>
                                 <li><a href="#">Agenda</a></li>
                                 <li class="fright"><a href="#">Contact</a></li>
@@ -79,6 +82,7 @@
     <script src="{{ asset('js/jquery-1.11.3.min.js')}}"></script>
     <script src="{{ asset('js/jquery.nivo.slider.pack.js')}}"></script>
     <script src="{{ asset('js/app.js')}}"></script>
+    <script src="{{ asset('js/bootstrap.min.js')}}"></script>
  
 
 {% endblock %}
